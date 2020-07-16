@@ -34,7 +34,7 @@ def pwned_api_check (password):
     first5_char , tail = sha1pass[:5], sha1pass [5:]
     response = request_api_data (first5_char)
     return get_pass_leaks_count(response, tail)
-    print (tail)
+    
 
 def read_text (file_name):
     file = open (f"text/{file_name}.txt", "r")
@@ -49,7 +49,7 @@ def main(args):
             print (f"{password} was found {count} times. Please change it")
         else:
             print (f"{password} was not found. You are good to go")
-    # print (count)
+    
 
 
 if __name__ == "__main__":
